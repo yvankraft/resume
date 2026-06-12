@@ -32,7 +32,7 @@ const revealVariant = {
 
 const handleDownload = () => {
   const link = document.createElement("a");
-  link.href = "/zidane.lebenslauf.pdf";
+  link.href = "/Yvan_wildis_ngone_tchinda.pdf";
   link.download = "Yvan_wildis_ngone_tchinda_CV.pdf";
   document.body.appendChild(link);
   link.click();
