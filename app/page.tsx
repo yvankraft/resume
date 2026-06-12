@@ -223,6 +223,33 @@ export default function page() {
         </AnimatePresence>
       </section>
 
+      <footer className="footer bg-base-400 text-base-content px-10 py-8">
+        <div className="w-full flex flex-col items-center text-center gap-4">
+          {/* Message de remerciement en anglais */}
+          <p className="text-zinc-400 font-medium">
+            Thanks for visiting! If you enjoyed my work, feel free to follow me.
+          </p>
+
+          {/* Invitation X */}
+          <a
+            href="https://x.com/wildisyvan53"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-zinc-200 transition-all"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              className="fill-current"
+            >
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+            </svg>
+            Follow on X
+          </a>
+        </div>
+      </footer>
+
       {/* footer */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
