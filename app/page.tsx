@@ -30,6 +30,15 @@ const revealVariant = {
   },
 };
 
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/yvan.Lebenslauf.pdf";
+  link.download = "Yvan_wildis_ngone_tchinda_Lebenslauf.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export default function page() {
   const [isOpen, setIsOpen] = useState(false);
   const [isTimelineOpen1, setIsTimelineOpen1] = useState(false);
@@ -202,13 +211,12 @@ export default function page() {
                 aria-label="Lebenslauf"
               />
               <div className="tab-content bg-base-100 border-base-300 p-6">
-                <a
-                  href="/Yvan_wildis_ngone_tchinda.pdf"
-                  download="Yvan_wildis_ngone_tchinda_CV.pdf"
-                  className="border border-gray-300 dark:border-white/10 bg-gray-200 dark:bg-white/5 hover:bg-gray-300 dark:hover:bg-white/10 dark:text-white px-8 py-5 rounded-2xl font-bold flex items-center gap-2 transition-all cursor-pointer"
+                <button
+                  onClick={handleDownload}
+                  className="border border-gray-300  dark:border-white/10 bg-gray-200 dark:bg-white/5 hover:bg-gray-300 dark:hover:bg-white/10 dark:text-white px-8 py-5 rounded-2xl font-bold flex items-center gap-2 transition-all"
                 >
-                  Download CV
-                </a>
+                  Download
+                </button>
               </div>
             </motion.div>
           )}
